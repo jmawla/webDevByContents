@@ -1,3 +1,8 @@
+* { 
+	margin: 0px;
+	padding: 0px;
+}
+
 body {
 	background-color: #eed;
 	margin: 0px;
@@ -41,23 +46,56 @@ header {
 
 	}
 
-	ul { margin: 0;}
-
 	nav {
 		float: right;
+		margin-top: 12px;
 	}
 
-	li {
-		list-style: none;
-		float: left;
-		margin-left: 55px;
+	ul#navMenu, ul.subNav { 
+		list-style-type: none;
+		margin: 0;
 		font-weight: bold;
 		font-size: 14px;
 		color: #5a5a5a;
-		margin-top: 12px;
 	}
-	a {
+
+	ul#navMenu li {
+		position: relative;
+		width: 125px;
+		text-align: center;
+		margin-right: 4px;
+		float: left;
+	}
+
+	ul#navMenu a {
 		text-decoration: none;
+		display: block;
+		width: 125px;
+		border-radius: 5px;
+	}
+	.subNav a {
+		margin-top: 3px;
+	}
+	ul#navMenu li:hover > a {
+		background-color: #CFC;
+	}
+	ul#navMenu li:hover a:hover {
+		font-style: italic;
+	}
+	ul#navMenu ul.subNav {
+		display: none;
+		position: absolute;
+		top: 16px;
+		left: 0px;
+	}
+	ul#navMenu li:hover .subNav {
+		display: block;
+	}
+	.darrow {
+		font-size: 8pt;
+		position: absolute;
+		top: 2px;
+		right: 4px;
 	}
 	a:hover {
 		text-decoration: underline;
